@@ -12,8 +12,7 @@ export default class GifListContainer extends React.Component {
       });
   }
 
-  handleSubmit = (event) => {
-     event.preventDefault();
+  handleSubmit = () => {
      fetch(`http://api.giphy.com/v1/gifs/search?q=${this.state.search}&api_key=dc6zaTOxFJmzC&rating=g`)
      .then(res=>res.json)
      .then(data =>{
@@ -23,7 +22,7 @@ export default class GifListContainer extends React.Component {
   }
 
   componentDidMount() {
-
+    this.handleSubmit
   }
 
   render() {
