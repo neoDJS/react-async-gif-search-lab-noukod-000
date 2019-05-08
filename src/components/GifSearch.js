@@ -10,5 +10,5 @@ export default class GifSearch extends React.Component {
         </form>
     )
   }
-    
+
 }
