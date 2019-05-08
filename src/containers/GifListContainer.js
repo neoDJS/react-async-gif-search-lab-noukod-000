@@ -6,9 +6,9 @@ export default class GifListContainer extends React.Component {
     gifs: []
    };
 
-  handleChange = ({target: {value}}) => {
+  handleChange = (e) => {
       this.setState({
-          query: value
+          query: e.target.value
       })
   }
 
