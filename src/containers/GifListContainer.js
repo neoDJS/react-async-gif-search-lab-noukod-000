@@ -8,7 +8,7 @@ export default class GifListContainer extends React.Component {
 
   handleChange = (e) => {
       this.setState({
-          query: e.target.value
+          search: e.target.value
       });
   }
 
