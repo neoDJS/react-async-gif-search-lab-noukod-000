@@ -6,6 +6,12 @@ export default class GifListContainer extends React.Component {
     gifs: []
    };
 
+  handleChange = ({target: {value}}) => {
+      this.setState({
+          query: value
+      })
+  }
+
   componentDidMount() {
     fetch(`http://api.giphy.com/v1/gifs/search?q=${this.state.search}&api_key=dc6zaTOxFJmzC&rating=g`)
     .then(res=>res.json)
@@ -18,7 +24,7 @@ export default class GifListContainer extends React.Component {
   render() {
     return (<div>
               <GifList gifs={this.state.gifs} />
-              <GifSearch />
+              <GifSearch onSubmit={this.handleSubmit} handleChange={this.handleChange} query={this.state.query} />
             </div>
           );
   }
