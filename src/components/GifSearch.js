@@ -5,7 +5,7 @@ export default class GifSearch extends React.Component {
   render(){
     return (
         <form onSubmit={this.props.onSubmit}>
-            <input type='text' value={this.props.query} onChange={this.props.handleChange}/>
+            <input type='text' value={this.props.search} onChange={this.props.handleChange}/>
             <button type='submit' className='btn primary'>Search</button>
         </form>
     )
