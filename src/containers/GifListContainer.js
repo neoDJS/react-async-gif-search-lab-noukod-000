@@ -29,7 +29,7 @@ export default class GifListContainer extends React.Component {
   render() {
     return (<div>
               <GifList gifs={this.state.gifs} />
-              <GifSearch onSubmit={this.handleSubmit} handleChange={this.handleChange} query={this.state.search} />
+              <GifSearch onSubmit={this.handleSubmit} handleChange={this.handleChange} search={this.state.search} />
             </div>
           );
   }
