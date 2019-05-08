@@ -22,7 +22,7 @@ export default class GifListContainer extends React.Component {
   }
 
   componentDidMount() {
-    this.handleSubmit
+    this.handleSubmit();
   }
 
   render() {
